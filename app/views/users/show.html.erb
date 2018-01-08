@@ -7,6 +7,12 @@
 <div class="row">
   <div class="col-md-12">
     <h4 class="center"><%= @user.username %>'s articles</h4>
+    <div class="center">
+      <%= will_paginate @user_articles %>
+    </div>
     <%= render 'articles/article', obj: @user.articles %>
+    <div class="center">
+      <%= will_paginate @user_articles %>
+    </div>
   </div>
 </div>
